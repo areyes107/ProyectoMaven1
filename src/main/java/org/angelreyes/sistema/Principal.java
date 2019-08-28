@@ -11,9 +11,9 @@ public class Principal {
         int contador =1;
         EntityManagerFactory enmanfac = Persistence.createEntityManagerFactory("ConexionDB"); //Interfaz para interactuar con la unidad de persistencia, no posee un constructor.
         EntityManager enman = enmanfac.createEntityManager();
-        while(contador<=5){
+        while(contador<=6){
         Persona persona = enman.find(Persona.class, contador); //buscamos el registro o tupla
-        System.out.println(persona);
+        System.out.println(persona); //Mostramos el registro o la tupla que tenemos
         contador++;
         }
         enmanfac.close();
